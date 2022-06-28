@@ -20,12 +20,12 @@ function App() {
         <Header />
         <main className="app-main">
           <Routes>
-            <Route path="/about" element={<About />} />
+            <Route path="assignment-1/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
             {!token ?
-              <Route path="/" element={<Login />} />
+              <Route path="assignment-1/" element={<Login />} />
               :
-              <Route path="/" element={<Dashboard />} />
+              <Route path="assignment-1/" element={<Dashboard />} />
             }
           </Routes>
         </main>

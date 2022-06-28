@@ -15,7 +15,7 @@ export default function Header() {
   return(
     <header className="header" data-testid="header">
       <Link
-        to="/"
+        to="assignment-1/"
         className="header__logo"
       >
         Logo_
@@ -24,7 +24,7 @@ export default function Header() {
         <ul className="header__nav">
           <li>
             <NavLink
-              to="/about"
+              to="assignment-1/about"
               className="header__link"
             >
               about
@@ -33,7 +33,7 @@ export default function Header() {
           {!token ? 
             <li>
               <NavLink
-                to="/"
+                to="assignment-1/"
                 className="header__link"
               >
                 login
@@ -43,7 +43,7 @@ export default function Header() {
             <>
               <li>
                 <NavLink
-                  to="/"
+                  to="assignment-1/"
                   className="header__link"
                 >
                   Dashboard
