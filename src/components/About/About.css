@@ -1,0 +1,23 @@
+.about__list li {
+  width: 100%;
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.about__list li:not(:first-child) {
+  margin-top: 0.25em;
+}
+
+.about__list li:before {
+  float: left;
+  margin-left: -1.5em;
+}
+
+.about__list--done li:before {
+  content: '\2713';
+}
+
+.about__list--left li:before {
+  content: '\2715';
+}

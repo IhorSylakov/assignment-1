@@ -1,0 +1,24 @@
+:root {
+  --color: #fff;
+  --invert-color: #00f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color: #41FF00;
+    --invert-color: #000;
+  }
+}
+
+body {
+  margin: 0;
+  color: var(--color);
+  font-size: 16px;
+  background: var(--invert-color);
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+a {
+  color: inherit;
+}

@@ -1,0 +1,63 @@
+.login{
+  display: flex;
+  padding-top: 3em;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__row {
+  display: grid;
+  font-size: 1.25em;
+  margin-top: 1.25em;
+  grid-template-columns: 100px 1fr;
+}
+
+.login__input {
+  background: transparent;
+  border: none;
+  color: inherit;
+  outline: none;
+  font-size: inherit;
+  font-family: inherit;
+  border-bottom: 1px dashed currentColor;
+}
+
+.login__input:-webkit-autofill,
+.login__input:-webkit-autofill:hover, 
+.login__input:-webkit-autofill:focus, 
+.login__input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px var(--invert-color) inset !important;
+}
+.login__input:-webkit-autofill{
+  -webkit-text-fill-color: var(--color) !important;
+}
+
+.login__input:focus {
+  border-bottom-style: solid;
+}
+
+.login__submit {
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.25em;
+  background: none;
+  margin-top: 1.25em;
+  padding: 0.5em 1.25em;
+  align-self: center;
+  text-align: center;
+  font-family: inherit;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+}
+
+.login__submit:focus,
+.login__submit:hover {
+  color: var(--invert-color);
+  outline: none;
+  background: var(--color);
+}
