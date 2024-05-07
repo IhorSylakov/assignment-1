@@ -14,7 +14,7 @@ export default function Users() {
 
   useEffect(() => {
     dispatch(fetchPosts(token))
-  }, [])
+  }, [dispatch, token])
 
   const filteredUsers = users.filter(user => (
     user.from_name.toLowerCase().includes(searchField.toLocaleLowerCase())

@@ -5,7 +5,7 @@ import { IUser } from '../../models/IUser';
 
 export const registerUser = (credentials: IUser) => async (dispatch: AppDispatch) => {
   try {
-    const response = await fetch('https://api.supermetrics.com/assignment/register', {
+    const response = await fetch('http://localhost:3001/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -13,7 +13,7 @@ export const registerUser = (credentials: IUser) => async (dispatch: AppDispatch
       body: JSON.stringify(credentials)
     })
     const res = await response.json();
-    const token = res.data.sl_token;
+    const token = res.token;
     dispatch(postSlice.actions.setToken(token))
   } catch (error) {
     console.log(error)
@@ -21,20 +21,19 @@ export const registerUser = (credentials: IUser) => async (dispatch: AppDispatch
 }
 
 export const fetchPosts = (token: string) => async (dispatch: AppDispatch) => {
-  const searchParams = new URLSearchParams({
-    sl_token: token,
-    page: '1'
-  });
-  const url = `https://api.supermetrics.com/assignment/posts?${searchParams.toString()}`;
+  const url = 'http://localhost:3001/posts';
   const options = {
     method: 'GET',
-    headers: {}
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json'
+    }
   }
   try {
     dispatch(postSlice.actions.postsFetching());
     const response = await fetch(url, options);
     const res = await response.json();
-    const posts = res.data.posts;
+    const posts = res.posts;
 
     const filteredByUser = posts
       .map((item: IPost) => item.from_name)

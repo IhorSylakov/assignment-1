@@ -59,7 +59,7 @@ export const postSlice = createSlice({
     },
     setToken(state, action: PayloadAction<string>) {
       state.token = action.payload;
-      localStorage.setItem('token', JSON.stringify(action.payload));
+      localStorage.setItem('token', action.payload);
     }
   }
 })
