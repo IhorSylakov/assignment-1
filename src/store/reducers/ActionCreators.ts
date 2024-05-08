@@ -5,7 +5,7 @@ import { IUser } from '../../models/IUser';
 
 export const registerUser = (credentials: IUser) => async (dispatch: AppDispatch) => {
   try {
-    const response = await fetch('http://localhost:3001/register', {
+    const response = await fetch('https://assignment-1-backend-1.vercel.app/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -21,7 +21,7 @@ export const registerUser = (credentials: IUser) => async (dispatch: AppDispatch
 }
 
 export const fetchPosts = (token: string) => async (dispatch: AppDispatch) => {
-  const url = 'http://localhost:3001/posts';
+  const url = 'https://assignment-1-backend-1.vercel.app/posts';
   const options = {
     method: 'GET',
     headers: {
