@@ -73,3 +73,27 @@ Nice to haves:
  
     *posts:* 100 posts per page
     ```
+
+## How it works
+
+[Check how it works on page](https://ihorsylakov.github.io/assignment-1/)
+
+### Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run start
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+<!-- ### Tests
+```
+npm run test
+``` -->
