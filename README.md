@@ -22,14 +22,16 @@ Nice to haves:
 - Deep-linkable post list. This means that it is possible to enter a URL that directly selects the sender whose posts are shown.
 
 ## Rough Design
-![Login Screen](./readme-images/login.png)
-![Posts Screen](./readme-images/posts.png)
+![Login Screen](https://raw.githubusercontent.com/IhorSylakov/IhorSylakov/main/repo-previews/assignment-1-login.png)
+![Posts Screen](https://raw.githubusercontent.com/IhorSylakov/IhorSylakov/main/repo-previews/assignment-1-posts.png)
 
 ## API
 
+0. Unfortunately the original API has not survived. To keep my test application working I had to familiarize myself with a short course on the backend. I also had to read the instructions on how to create a backend using nodejs and express to emulate the behavior of the original backend. I'm afraid I didn't get it all right, but the main points are working - receiving requests from the frontend to the specified endpoints and responding to these requests.
+
 1. Use the following endpoint to register a token:
 
-    **POST:** `https://api.supermetrics.com/assignment/register`
+    **POST:** `https://assignment-1-backend-1.vercel.app/register`
 
     **PARAMS:**
    
@@ -44,7 +46,7 @@ Nice to haves:
     **RETURNS**
     
     ```
-    *sl_token:* This token string should be used in the subsequent query. Please note that this token will only last 
+    *token:* This token string should be used in the subsequent query. Please note that this token will only last 
                 1 hour from when the REGISTER call happens. You will need to register and fetch a new token as you need it.
  
     *client_id:* Returned for informational purposes only
@@ -54,7 +56,7 @@ Nice to haves:
 
 2. Use the following endpoint to fetch posts:
 
-    **GET:** `https://api.supermetrics.com/assignment/posts`
+    **GET:** `https://assignment-1-backend-1.vercel.app/posts`
 
     **PARAMS:**
     
@@ -71,5 +73,3 @@ Nice to haves:
  
     *posts:* 100 posts per page
     ```
-   
-Author: [Supermetrics](https://supermetrics.com)
